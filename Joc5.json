@@ -1,0 +1,61 @@
+{
+    "start": [
+      {
+        "id": "1",
+        "descripcio": "Benvingut al joc del penjat, bona sort!, per començar dirigeix-te al endpoint preguntes amb l'id de la pregunta, es a dir, l'id de la pregunta 1 es 1, i aixi successivament."
+      }
+    ],
+    "preguntes": [
+      {
+        "id": "1",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la cinquena lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un POST a l'endpoint paraula amb id: 1"
+      },
+      {
+        "id": "2",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la dotzena lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT en l'endpoint /paraula/1"
+      },
+      {
+        "id": "3",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la cinquena lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT"
+      },
+      {
+        "id": "4",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la sexta lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT"
+      },
+      {
+        "id": "5",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la primera lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT"
+      },
+      {
+        "id": "6",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la catorzena de lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT"
+      },
+      {
+        "id": "7",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la vintena lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT"
+      },
+      {
+        "id": "8",
+        "descripcio": "Molt be, l'has endevinat lletra!  Ara digues la cinquena lletra del abecedari, i afegeix-la a l'endpoint paraula, fent servir un PUT. Ara ves a l'endpoint repostes."
+      }
+    ],
+    "respostes": [
+      {
+        "id": "1",
+        "paraula": " Molt bé has endevinat la paurala, Elefante. Per ultim registra la teva victoria en l'apartat guanyador. FENT SERVIR UN PUTS",
+        "desc": "ARA QUE HAS ACABAT EL JOC FES UN DELETE EN /paraula/1 perque el seguent es trobi el joc de 0"
+      }
+    ],
+    "paraula": [
+      {
+        "descripcio": "En aquest endpoint afegeix el que et demana a la pregunta 1"
+      }
+    ],
+    "guanyador": [
+      {
+        "id": "1",
+        "guanyador": "Denís"
+      }
+    ]
+   }
+   

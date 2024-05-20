@@ -1,0 +1,60 @@
+{
+ "start": [
+   {
+     "id": "1",
+     "descripcio": "Estàs atrapat en una mansió embruixada. El teu objectiu és alliberar els esperits atrapats i trobar la sortida abans de l'alba. Hauràs de realitzar diverses tasques i resoldre enigmes utilitzant diferents mètodes GET, POST, PUT i DELETE. Bona sort!",
+     "descripcio2": "Per començar, dirigeix-te a l'endpoint de /preguntes."
+   }
+ ],
+ 
+ "preguntes": [
+   {
+     "id": "1",
+     "descripcio": "La primera tasca és encendre les espelmes rituals. Respon a l'endpoint respostes amb 'espelmes' per continuar."
+   },
+   {
+     "id": "2",
+     "descripcio": "Les espelmes estan enceses. Ara necessites trobar el llibre de conjurs. Respon amb '/respostes/llibre'."
+   }
+ ],
+ "respostes": [
+   {
+     "id": "espelmes",
+     "descripcio": "Espelmes enceses correctament. Ara has de trobar el llibre de conjurs i ves a la /preguntes/2",
+     "seguent_pas": "Realitza un PUT a /accions/llibre per trobar el llibre de conjurs i canvia a true el valor de false."
+   },
+   {
+     "id": "llibre",
+     "descripcio": "Llibre de conjurs trobat correctament. Realitza l'encanteri d'alliberament i ves a l'endpoint /respostes/encanteri",
+     "seguent_pas": "Fes un DELETE a /accions/encanteri per realitzar l'encanteri d'alliberament."
+   },
+   {
+     "id": "encanteri",
+     "descripcio": "Encanteri realitzat correctament. Ara has de trobar la sortida i ves a l'endpoint /respostes/sortida",
+     "seguent_pas": "Fes un POST a /accions/sortida per trobar la sortida seguint el format de l'acció del llibre."
+   },
+   {
+     "id": "sortida",
+     "descripcio": "Sortida trobada correctament. Has alliberat els esperits i completat la missió.",
+     "seguent_pas": "Registra el teu nom a l'endpoint 'guanyador' per completar la missió fent un PUT."
+   }
+ ],
+ "accions": [
+   {
+     "id": "llibre",
+     "descripcio": "Trobar el llibre de conjurs",
+     "completat": false
+   },
+   {
+     "id": "sortida",
+     "descripcio": "Trobar la sortida",
+     "completat": true
+   }
+ ],
+ "guanyador": [
+   {
+     "id": "1",
+     "nom": "Ana"
+   }
+ ]
+}

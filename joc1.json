@@ -1,0 +1,64 @@
+{
+    "start": {
+      "id":"1",
+      "descripcio": "¡Benvingut a l'Expedició Perduda! La teva missió és descobrir els secrets ocults a la selva i trobar l'antic temple abans que caigui la nit.",
+      "accions": [
+        {
+          "metode": "GET",
+          "endpoint": "/primera-prova",
+          "descripcio": "Enfrentat a la primera prova."     
+        }
+      ]
+    },
+    "primera-prova": {
+      "id":"2",
+      "descripcio": "T'endinses a la densa selva i trobes el primer repte. Has de desxifrar l'enigma escrit a les antigues ruïnes.",
+      "estat": "locked",
+      "enigma": {
+        "pista": "Per avançar, resol la seguent equacio: 8 * 3 - 6.",
+        "metode": "GET"
+      }
+    },
+      "18": {
+      "id":"3",
+      "segona-prova": "segona-prova" ,
+      "descripcio": "¡Felicitats has resolt la primera prova!.",
+      "estat": "locked",
+      "enigma": {
+        "pista": "Fes una llista de 3 objectes que no poden faltar a la teva expedidcio: .",
+        "pista vis": "Un cop feta la llista ves a la seguent prova (/tercera-prova)",
+        "metode": "POST"  
+      }
+    },
+    "tercera-prova": {
+      "descripcio": "¡Felicitats has resolt la segona prova!.",
+      "estat": "locked",
+      "enigma": {
+        "pista": "Afegeix a la llista 2 objectes mes.",
+        "pista vis": "Un cop feta la llista ves a la seguent prova (/cuarta-prova)",
+        "metode": "PUT"
+      }
+    },
+     "cuarta-prova": {
+      "descripcio": "¡Felicitats has resolt la tercera prova!.",
+      "estat": "locked",
+      "enigma": {
+        "pista": "Ara elimina la llista que has creat abans.",
+        "pista vis": "Un cop feta la llista ves a la seguent prova (/quinta-prova)",
+        "metode": "DELETE"
+      }
+    },
+    "quinta-prova": {
+      "descripcio": "¡Felicitats has resolt la cuarta prova!.",
+      "estat": "locked",
+      "enigma": {
+        "pista": "Resol el seguent calcul: 25 / 5 + 3.",
+        "method": "GET"
+      }
+     },
+    "8": {
+    "tresor": "tresor",
+      "descripcio": "Enhorabona! Has completat tots els desafiaments i has trobat l'antic temple perdut a la selva.",
+      "estat": "unlocked"
+    }
+  }

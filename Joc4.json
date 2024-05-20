@@ -1,0 +1,60 @@
+{
+  "comienzo": [
+    {
+      "id": "1",
+      "descripcion": "Te encuentras en una base submarina que ha sido dañada por una tormenta. Tu objetivo es reparar los sistemas y ascender a la superficie. Realiza varias tareas y resuelve problemas usando métodos HTTP. ¡Buena suerte!",
+      "paso_inicial": "Dirígete al endpoint 'misiones'"
+    }
+  ],
+  
+  "misiones": [
+    {
+      "id": "1",
+      "descripcion": "Tu primera tarea es reparar el sistema de oxígeno. Responde al endpoint soluciones con 'oxigeno'."
+    },
+    {
+      "id": "2",
+      "descripcion": "Sistema de oxígeno reparado. Ahora necesitas recalibrar los motores. Responde con '/soluciones/motores'."
+    }
+  ],
+  "soluciones": [
+    {
+      "id": "oxigeno",
+      "descripcion": "Sistema de oxígeno reparado. Ahora recalibra los motores y ve a /misiones/2",
+      "siguiente_paso": "Realiza un PUT a /acciones/motores para recalibrarlos."
+    },
+    {
+      "id": "motores",
+      "descripcion": "Motores recalibrados. Dirígete al cuarto de control y ve al endpoint /soluciones/control",
+      "siguiente_paso": "Haz un DELETE a /acciones/control para reiniciar el sistema de control."
+    },
+    {
+      "id": "control",
+      "descripcion": "Sistema de control reiniciado. Encuentra la cápsula de escape y ve al endpoint /soluciones/capsula",
+      "siguiente_paso": "Haz un POST a /acciones/capsula para activar la cápsula de escape."
+    },
+    {
+      "id": "capsula",
+      "descripcion": "Cápsula de escape activada. Asciende a la superficie para completar la misión.",
+      "siguiente_paso": "Registra tu nombre en el endpoint 'ganador' haciendo un PUT."
+    }
+  ],
+  "acciones": [
+    {
+      "id": "motores",
+      "descripcion": "Recalibrar los motores",
+      "completado": false
+    },
+    {
+      "id": "capsula",
+      "descripcion": "Activar la cápsula de escape",
+      "completado": true
+    }
+  ],
+  "ganador": [
+    {
+      "id": "1",
+      "nombre": "Ana"
+    }
+  ]
+}

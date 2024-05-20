@@ -1,0 +1,64 @@
+{
+  "start": {
+    "id": "1",
+    "descripcio": "Benvingut al Festival Culinari! La teva missió és preparar un banquet complet superant diversos desafiaments culinaris. Hauràs de completar les proves abans que acabi el temps. Bona sort!",
+    "accions": [
+      {
+        "metode": "GET",
+        "endpoint": "/primera-prova",
+        "descripcio": "Inicia la primera prova per trobar els ingredients necessaris."    
+      }
+    ]
+  },
+  "primera-prova": {
+    "id": "2",
+    "descripcio": "Has arribat al mercat. Ara has de trobar tots els ingredients de la llista.",
+    "estat": "locked",
+    "enigma": {
+      "pista": "Quin és el rei dels jardins i dels horts, però mai no es mou?",
+      "metode": "GET"
+    }
+  },
+  "espantaocells": {
+    "id": "3",
+    "segona-prova": "segona-prova",
+    "descripcio": "Felicitats! Has trobat tots els ingredients.",
+    "estat": "locked",
+    "enigma": {
+      "pista": "Enumera els 5 ingredients principals que has comprat.",
+      "pista vis": "Un cop enumerats, ves a la següent prova (/tercera-prova).",
+      "metode": "POST"
+    }
+  },
+  "tercera-prova": {
+    "descripcio": "Felicitats! Has enumerat els ingredients principals.",
+    "estat": "locked",
+    "enigma": {
+      "pista": "Afegeix 2 ingredients especials per donar un toc únic al teu plat.",
+      "pista vis": "Un cop afegits, ves a la següent prova (/cuarta-prova).",
+      "metode": "PUT"
+    }
+  },
+  "cuarta-prova": {
+    "descripcio": "Felicitats! Has afegit els ingredients especials.",
+    "estat": "locked",
+    "enigma": {
+      "pista": "Què és el que sempre arriba, però mai arriba?",
+      "pista vis": "Un cop resolta, ves a la següent prova (/quinta-prova).",
+      "metode": "DELETE"
+    }
+  },
+  "demà": {
+    "descripcio": "Felicitats! Has resolt l'endevinalla.",
+    "estat": "locked",
+    "enigma": {
+      "pista": "Què va pel món però sempre es queda en un racó?",
+      "metode": "GET"
+    }
+  },
+  "segell": {
+    "tresor": "tresor",
+    "descripcio": "Enhorabona! Has completat tots els desafiaments culinaris i preparat un banquet espectacular.",
+    "estat": "unlocked"
+  }
+}

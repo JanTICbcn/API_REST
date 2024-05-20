@@ -1,0 +1,59 @@
+{
+  "inicio": [
+    {
+      "id": "1",
+      "descripcion": "Estás participando en una carrera de motocross en un circuito peligroso. Tu objetivo es superar los obstáculos y llegar a la meta antes que los demás. Deberás realizar varias tareas y resolver problemas utilizando métodos HTTP. ¡Buena suerte!",
+      "paso_inicial": "Dirígete al endpoint 'desafios' y consulta el desafío http://localhost:3000/desafios/1 para ver el primer desafío."
+    }
+  ],
+  "desafios": [
+    {
+      "id": "1",
+      "descripcion": "Tu primera tarea es ajustar la suspensión de tu moto. Responde al endpoint soluciones con 'suspension'."
+    },
+    {
+      "id": "2",
+      "descripcion": "Suspensión ajustada. Ahora necesitas revisar los frenos. Responde con '/soluciones/frenos'."
+    }
+  ],
+  "soluciones": [
+    {
+      "id": "suspension",
+      "descripcion": "Suspensión ajustada. Ahora revisa los frenos y ve a /desafios/2",
+      "siguiente_paso": "Realiza un PUT a /acciones/frenos para revisar los frenos."
+    },
+    {
+      "id": "frenos",
+      "descripcion": "Frenos revisados. Ve a la zona de repostaje y ve al endpoint /soluciones/repostaje",
+      "siguiente_paso": "Haz un DELETE a /acciones/repostaje para completar el repostaje."
+    },
+    {
+      "id": "repostaje",
+      "descripcion": "Repostaje completado. Ahora ajusta el sistema de transmisión y ve al endpoint /soluciones/transmision",
+      "siguiente_paso": "Haz un POST a /acciones/transmision para ajustar el sistema de transmisión."
+    },
+    {
+      "id": "transmision",
+      "descripcion": "Sistema de transmisión ajustado. Dirígete a la meta para completar la carrera.",
+      "siguiente_paso": "Registra tu nombre en el endpoint 'ganador' haciendo un PUT."
+    }
+  ],
+  "acciones": [
+    {
+      "id": "frenos",
+      "descripcion": "Revisar los frenos",
+      "completado": false
+    },
+    {
+      "id": "transmision",
+      "descripcion": "Ajustar el sistema de transmisión",
+      "completado": true
+    }
+  ],
+  "ganador": [
+    {
+      "id": "1",
+      "nombre": "Carlos"
+    }
+  ]
+}
